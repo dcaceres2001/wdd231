@@ -4,11 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Chamber of Commerce</title>
+    <meta name="description"
+        content="WDD 231 – Web Frontend Development I- Douglas Caceres-This is my website, designed to test my new skills">
+    <meta name="author" content="Douglas Caceres">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+
 </head>
 
 <body>
-    <h1>WDD231 Douglas</h1>
+    <header>
+        <img src="images/volcano_icon_126033.svg" alt="site logo" width="80" height="80">
+        <span>Douglas Caceres</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        
+        <div class="sections">
+        <section class="about">
+            <h2>About Me</h2>
+            <p>My name is Douglas Caceres, and I am a student at BYU-Idaho. I am currently pursuing a
+                degree in Computer Science with a focus on software development. I have always been passionate about
+                technology and programming, and I am excited to continue learning and growing in this field.</p>
+
+        </section>
+        <section class="profile">
+            <h2>Student Photo</h2>
+            <img src="images/profile.jpg" alt="profile photo" width="250" height="300">
+        </section>
+        <section class="courses">
+            <h2 id="certificates">Web Certificate Courses</h2>
+
+            <div class="filters">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="CSE">CSE</button>
+                <button class="filter-btn" data-filter="WDD">WDD</button>
+            </div>
+
+            <div id="course-list" class="course-list">
+                <!-- Course items will be dynamically inserted here -->
+                
+            </div>
+                <div id="total-credits" class="total-credits">
+                    Total Credits: <span id="credits-count">0</span>
+                </div>
+        </section>
+    </div>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/douglasrene.caceres" target="_blank"><img src="images/facebook.svg"
+                    alt="facebook icon" width="16" height="16"></a>
+            <a href="https://www.instagram.com/douglasrene.caceres/" target="_blank"><img src="images/instagram.svg"
+                    alt="instagram icon" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/douglas-c%C3%A1ceres-73904b134/" target="_blank"><img
+                    src="images/linkedin.svg" alt="linkedin icon" width="16" height="16"></a>
+            <a href="https://github.com/dcaceres2001" target="_blank"><img src="images/github.svg" alt="github icon"
+                    width="16" height="16"></a>
+        </div>
+        <p>&copy; <span id="currentYear"></span> Douglas Caceres. Guatemala.</p>
+        <p id="lastModified">last modified: </p>
+
+    </footer>
 </body>
 
 </html>

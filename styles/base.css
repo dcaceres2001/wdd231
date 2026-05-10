@@ -1,0 +1,233 @@
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e67e22;
+    --accent-color: #34495e;
+    --bg-light: #f4f4f4;
+    --text-main: #333333;
+    --text-light: #ffffff;
+    --border-color: #bdc3c7;
+    --completed-color: #d5e6d5;
+    --completed-border: #27ae60;
+    
+}
+
+/****General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    margin: 0;
+}
+
+/**** Header ****/
+header {
+    display: grid;
+    grid-template-columns: 60px auto 44px;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+    gap: 15px;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/**** Navigation ****/
+.navigation {
+    display: none;
+    background-color: var(--primary-color);
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    color: var(--text-light);
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation li.current {
+    background-color: var(--secondary-color);
+}
+
+/**** Main Content ****/
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 15px;
+}
+
+.about,
+.profile,
+.courses {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+.sections h2 {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.about p {
+    padding: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.profile img {
+    display: block;
+    margin: 15px auto;
+    max-width: 80%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/**** Courses & Filters ****/
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+.filter-btn {
+    flex: 1;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.course-item {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.course-item.completed {
+    background-color: var(--completed-color);
+    border-left: 8px solid var(--completed-border);
+    color: #1e4620;
+}
+
+#total-credits {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+/**** Footer ****/
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 2rem 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+   
+    color: var(--primary-color);
+    padding: 5px;
+    height: 44px;
+    
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 2.5rem;
+}
+
+
+.hamburger:active {
+    transform: scale(0.9);
+}
