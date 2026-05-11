@@ -1,7 +1,7 @@
 
 :root {
     --primary-color: #2c3e50;
-    --secondary-color: #e67e22;
+    --secondary-color: #B65E12;
     --accent-color: #34495e;
     --bg-light: #f4f4f4;
     --text-main: #333333;
@@ -14,7 +14,7 @@
 
 /****General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: var(--text-main);
     margin: 0;
 }
