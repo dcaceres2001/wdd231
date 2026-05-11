@@ -59,18 +59,18 @@ header span {
 .navigation a {
     display: block;
     padding: 1rem;
-    color: #ffffff !important;
+    color: var(--text-light) !important;
     text-decoration: none;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navigation a:visited {
-    color: #ffffff !important;
+    color: var(--text-light) !important;
 }
 
 .navigation li.current {
-    color: white;
+    color: var(--text-light) !important;
     background-color: var(--secondary-color);
 }
 
