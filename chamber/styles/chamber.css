@@ -42,6 +42,12 @@ header {
     gap: 15px;
 }
 
+ header span {
+        font-size: 2em;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
 header img {
     width: 100%;
     height: auto;
@@ -115,6 +121,8 @@ header img {
 
 /**** Main Content & Home Components ****/
 h1 {
+
+    text-align: center;
     font-size: 1.4em;
     font-weight: bold;
     color: var(--primary-color);
