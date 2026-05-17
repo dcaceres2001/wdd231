@@ -1,0 +1,28 @@
+{
+    "family_name": "Garcia",
+    "date_moved": "2024-06-01",
+    "number_of_members": 4,
+    "visited_family_bishop": true,
+    "family_members": [
+        {
+            "name": "John",
+            "gender": "Male",
+            "dob": "1983-05-15"
+        },
+        {
+            "name": "Maria",
+            "gender": "Female",
+            "dob": "1985-08-22"
+        },
+        {
+            "name": "Sofia",
+            "gender": "Female",
+            "dob": "2008-12-10"
+        },
+        {
+            "name": "Carlos",
+            "gender": "Male",
+            "dob": "2013-03-25"
+        }
+    ]
+}

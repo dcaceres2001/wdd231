@@ -1,0 +1,102 @@
+[
+  {
+    "company_name": "Lava Leap Adventures",
+    "company_addresses": "102 Avenida del Fuego, Sector 3, San Juan Alotenango, Guatemala",
+    "company_phone_number": "+502 7832-9111",
+    "company_website_url": "https://lavaleapadventuresfake.com",
+    "image_file_name": "lava-canopy.jpg",
+    "membership_level": 3,
+    "business_type": "Adventure Tourism",
+    "visitor_perk": "Free volcano-certified helmets and walking sticks for all renters."
+  },
+  {
+    "company_name": "Magma Moist Spa & Resort",
+    "company_addresses": "Km 52 Carretera Nacional, San Vicente Pacaya, Guatemala",
+    "company_phone_number": "+502 7839-4422",
+    "company_website_url": "https://magmamoistspafake.com",
+    "image_file_name": "hotel-wellness.jpg",
+    "membership_level": 3,
+    "business_type": "Hotel & Wellness",
+    "visitor_perk": "Natural volcanic mud facial included with any overnight stay."
+  },
+  {
+    "company_name": "The Ash & Oak Souvenir Shop",
+    "company_addresses": "Calle Principal #45, Ciudad Vieja, Guatemala",
+    "company_phone_number": "+502 7831-0554",
+    "company_website_url": "https://ashandoakgiftsfake.com",
+    "image_file_name": "equipment.jpg",
+    "membership_level": 1,
+    "business_type": "Retail Store",
+    "visitor_perk": "Complimentary small vial of certified volcanic ash with purchases over $20."
+  },
+  {
+    "company_name": "Volcano View Drone Photography",
+    "company_addresses": "Ruta de Evacuación 4, Palín, Guatemala",
+    "company_phone_number": "+502 7767-8899",
+    "company_website_url": "https://volcanoviewdronesfake.com",
+    "image_file_name": "media.jpg",
+    "membership_level": 2,
+    "business_type": "Media Services",
+    "visitor_perk": "10% discount on personalized 4K crater flyover video packages."
+  },
+  {
+    "company_name": "Crater Rim Outfitters",
+    "company_addresses": "Barrio El Centro, Santa María de Jesús, Guatemala",
+    "company_phone_number": "+502 7830-1122",
+    "company_website_url": "https://craterrimoutfittersfake.com",
+    "image_file_name": "gear-rental.jpg",
+    "membership_level": 2,
+    "business_type": "Gear Rental",
+    "visitor_perk": "Heavy-duty thermal jacket rentals for cold night summits."
+  },
+  {
+    "company_name": "Pyroclastic Pizza & Pub",
+    "company_addresses": "Avenida Centroamérica 8-12, Antigua Guatemala, Guatemala",
+    "company_phone_number": "+502 7832-0011",
+    "company_website_url": "https://pyroclasticpizzafake.com",
+    "image_file_name": "restaurant.jpg",
+    "membership_level": 1,
+    "business_type": "Restaurant",
+    "visitor_perk": "Try the 'Eruption Challenge' pizza to win a free commemorative t-shirt."
+  },
+  {
+    "company_name": "Basalt Boulder Climbing Gym",
+    "company_addresses": "Callejón de la Lava #3, San Miguel Dueñas, Guatemala",
+    "company_phone_number": "+502 7888-3434",
+    "company_website_url": "https://basaltboulderfake.com",
+    "image_file_name": "fitness-recreation.jpg",
+    "membership_level": 2,
+    "business_type": "Fitness & Recreation",
+    "visitor_perk": "Day pass includes free rental of volcanic-grip climbing shoes."
+  },
+  {
+    "company_name": "Summit Safe Oxygen & First Aid",
+    "company_addresses": "Kilómetro 48, Ruta al Volcán, Palin, Guatemala",
+    "company_phone_number": "+502 7951-4040",
+    "company_website_url": "https://summitsafefake.com",
+    "image_file_name": "emergency-services.jpg",
+    "membership_level": 3,
+    "business_type": "Emergency Services",
+    "visitor_perk": "Free altitude sickness assessment and oxygen saturation check."
+  },
+  {
+    "company_name": "Obsidian Shuttle Services",
+    "company_addresses": "Terminal de Buses Local, Local 5, Escuintla, Guatemala",
+    "company_phone_number": "+502 7720-6677",
+    "company_website_url": "https://obsidianshuttlefake.com",
+    "image_file_name": "shuttle.jpg",
+    "membership_level": 1,
+    "business_type": "Transportation",
+    "visitor_perk": "Hourly 4x4 departures directly to the main volcano trailheads."
+  },
+  {
+    "company_name": "Tectonic Eco-Lodge",
+    "company_addresses": "Finca Las Cenizas, Antigua Guatemala, Guatemala",
+    "company_phone_number": "+502 7824-5566",
+    "company_website_url": "https://tectonicecolodgefake.com",
+    "image_file_name": "lodge.jpg",
+    "membership_level": 3,
+    "business_type": "Hotel & Lodging",
+    "visitor_perk": "Stargazing deck equipped with high-powered telescopes to view night eruptions."
+  }
+]
