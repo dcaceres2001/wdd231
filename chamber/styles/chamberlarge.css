@@ -74,3 +74,39 @@
         align-items: flex-start;
     }
 }
+
+/*** home styles ***/
+
+ .home-layout {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 25px;
+ }
+
+ .hero-container,
+ .spotlight-section {
+     grid-column: span 2;
+ }
+
+ .hero-container img {
+     height: 380px;
+ }
+
+ .spotlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+ }
+
+ .spotlight-card {
+    padding: 20px;
+ }
+ 
+ @media (min-width: 1024px) {
+     .hero-container img {
+         height: 440px;
+     }
+ }
+
+
+

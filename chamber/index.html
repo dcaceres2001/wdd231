@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Main Page</title>
+    <meta name="description"
+        content="WDD 231 – Web Frontend Development I- Douglas Caceres-This is my website, designed to test my new skills">
+    <meta name="author" content="Douglas Caceres">
+
+
+
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamberlarge.css">
+
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+
+    <meta property="og:title" content="Chamber of Commerce">
+    <meta property="og:description"
+        content="WDD 231 – Web Frontend Development I- Douglas Caceres-This is my website, designed to test my new skills">
+    <meta property="og:image" content="https://dcaceres2001.github.io/wdd231/chamber/images/Volcanes-de-Guatemala.webp">
+    <meta property="og:url" content="https://dcaceres2001.github.io/chamber/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <img src="images/volcano_icon_126033.svg" alt="Chamber Logo">
+        <span>Chamber</span>
+        <button id="ham-btn"class="hamburger" aria-label="Toggle Menu"></button>
+    </header>
+    <div id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Business Directory</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </div>
+    <main class="sections home-layout">
+        
+        <section class="hero-container">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/volcanes-de-Guatemala.jpg">
+                <img src="images/volcanes-de-guatemala-small.jpeg" alt="Volcano View Center" loading="eager">
+            </picture>
+            <div class="cta-box">
+                <h2>Explore Opportunities</h2>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+     
+        <section class="about events-panel">
+            <h2>Upcoming Events</h2>
+            <div class="panel-content">
+                <article>
+                    <h3>Summit Business Expo</h3>
+                    <p>Networking and live product presentations near the peaks.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about weather-panel">
+            <h2>Local Weather</h2>
+            <div class="weather-info panel-content">
+                <div class="weather-main">
+                    <img id="weather-icon" src="" alt="">
+                    <p class="current-temp"><span id="temperature"></span>&deg;C</p>
+                </div>
+                <p id="condition" class="weather-desc"></p>
+                <hr>
+                <p>Wind Speed: <span id="windspeed"></span> m/s</p>
+                <p>Wind Chill: <span id="windchill"></span></p>
+            </div>
+        </section>
+
+        <section class="spotlight-section">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+               
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/douglasrene.caceres" target="_blank"><img src="images/facebook.svg"
+                    alt="facebook icon" width="16" height="16" loading="lazy"></a>
+            <a href="https://www.instagram.com/douglasrene.caceres/" target="_blank"><img src="images/instagram.svg"
+                    alt="instagram icon" width="16" height="16" loading="lazy"></a>
+            <a href="https://www.linkedin.com/in/douglas-c%C3%A1ceres-73904b134/" target="_blank"><img
+                    src="images/linkedin.svg" alt="linkedin icon" width="16" height="16" loading="lazy"></a>
+            <a href="https://github.com/dcaceres2001" target="_blank"><img src="images/github.svg" alt="github icon"
+                    width="16" height="16" loading="lazy"></a>
+        </div>
+        <p>&copy; <span id="currentYear"></span> Douglas Caceres. Guatemala.</p>
+        <p id="lastModified">last modified: </p>
+
+    </footer>
+</body>
+
+</html>
