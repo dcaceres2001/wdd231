@@ -21,7 +21,7 @@
     <meta property="og:title" content="Chamber of Commerce">
     <meta property="og:description"
         content="WDD 231 – Web Frontend Development I- Douglas Caceres-This is my website, designed to test my new skills">
-    <meta property="og:image" content="https://dcaceres2001.github.io/wdd231/chamber/images/Volcanes-de-Guatemala.webp">
+    <meta property="og:image" content="https://dcaceres2001.github.io/wdd231/chamber/images/volcanes-large.jpg">
     <meta property="og:url" content="https://dcaceres2001.github.io/chamber/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,23 +37,25 @@
 <body>
     <header>
         <img src="images/volcano_icon_126033.svg" alt="Chamber Logo">
-        <span>Chamber</span>
-        <button id="ham-btn"class="hamburger" aria-label="Toggle Menu"></button>
+       
+        <span>Chamber of Commerce</span>
+        <h1>Guatemala</h1>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle Menu"></button>
     </header>
-    <div id="nav-bar" class="navigation">
+    <nav id="nav-bar" class="navigation">
         <ul>
             <li class="current"><a href="index.html">Home</a></li>
             <li><a href="directory.html">Business Directory</a></li>
             <li><a href="#">Discover</a></li>
             <li><a href="join.html">Join</a></li>
         </ul>
-    </div>
+    </nav>
     <main class="sections home-layout">
         
         <section class="hero-container">
             <picture>
-                <source media="(min-width: 768px)" srcset="images/volcanes-de-Guatemala.jpg">
-                <img src="images/volcanes-de-guatemala-small.jpeg" alt="Volcano View Center" loading="eager">
+                <source media="(min-width: 768px)" srcset="images/volcanes-large.jpg">
+                <img src="images/volcanes-small.jpeg" alt="Volcano View Center" loading="eager">
             </picture>
             <div class="cta-box">
                 <h2>Explore Opportunities</h2>
@@ -76,7 +78,7 @@
             <h2>Local Weather</h2>
             <div class="weather-info panel-content">
                 <div class="weather-main">
-                    <img id="weather-icon" src="" alt="">
+                    <img id="weather-icon"  alt="small weather icon">
                     <p class="current-temp"><span id="temperature"></span>&deg;C</p>
                 </div>
                 <p id="condition" class="weather-desc"></p>
