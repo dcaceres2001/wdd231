@@ -1,51 +1,67 @@
 // Function to open the membership details modal and populate it with data from the JSON file
 
-async function openModal(level) {
-    const modal = document.getElementById('membership-modal');
-    const contentContainer = document.getElementById('modal-content');
+document.addEventListener('DOMContentLoaded', () => {
+    
+    async function openModal(level) {
+        const modal = document.getElementById('membership-modal');
+        const contentContainer = document.getElementById('modal-content');
 
-    try {
-      
-        const response = await fetch('./data/membership.json');
+        try {
+            const response = await fetch('./data/membership.json');
 
-       
-        if (!response.ok) {
-            throw new Error(`Failed to load JSON file: ${response.status}`);
+            if (!response.ok) {
+                throw new Error(`Failed to load JSON file: ${response.status}`);
+            }
+
+            const membershipData = await response.json();
+            const data = membershipData[level];
+
+            if (!data) {
+                console.error(`Membership level "${level}" Not Found in JSON data.`);
+                return;
+            }
+
+            const benefitsHTML = data.benefits
+                .map(benefit => `<li>${benefit}</li>`)
+                .join('');
+
+            contentContainer.innerHTML = `
+                <h2>${data.title}</h2>
+                <p class="modal-cost"><strong>Investment:</strong> ${data.cost}</p>
+                <h3>What's Included:</h3>
+                <ul>
+                    ${benefitsHTML}
+                </ul>
+            `;
+
+            modal.showModal();
+
+        } catch (error) {
+            console.error('Error processing membership data:', error);
         }
-
-       
-        const membershipData = await response.json();
-
-       
-        const data = membershipData[level];
-
-        if (!data) {
-            console.error(`Membership level "${level}" Not Found in JSON data.`);
-            return;
-        }
-
-       
-        const benefitsHTML = data.benefits
-            .map(benefit => `<li>${benefit}</li>`)
-            .join('');
-
-        
-        contentContainer.innerHTML = `
-            <h2>${data.title}</h2>
-            <p class="modal-cost"><strong>Investment:</strong> ${data.cost}</p>
-            <h3>What's Included:</h3>
-            <ul>
-                ${benefitsHTML}
-            </ul>
-        `;
-
-       
-        modal.showModal();
-
-    } catch (error) {
-        console.error('Error processing membership data:', error);
     }
-}
+
+   
+    const cardsGrid = document.querySelector('.cards-grid');
+
+    
+    if (cardsGrid) {
+        cardsGrid.addEventListener('click', (event) => {
+            
+            const button = event.target.closest('.modal-link');
+
+            if (button) {
+                
+                const membershipLevel = button.dataset.membership;
+
+                
+                openModal(membershipLevel);
+            }
+        });
+    }
+});
+
+
 
 // Function to open the Thank You modal with form data
 

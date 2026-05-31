@@ -19,7 +19,7 @@
 
     <script src="scripts/chamber.js" defer></script>
     <script src="scripts/modal.js" defer></script>
-    
+
 
     <meta property="og:title" content="Chamber of Commerce">
     <meta property="og:description"
@@ -67,12 +67,12 @@
                 <input type="text" name="lastName" title="Applicant's Last Name" autocomplete="family-name" placeholder="last name" required>
             </label>
         
-            <label>
-                Organizational Title
-                <input type="text" name="orgTitle" title="Organizational Title within organization"
-                    autocomplete="organization-title" placeholder="eg. Sales Manager" pattern="[A-Za-z\s\-]{7,}"
-                    title="Minimum 7 characters. Only letters, spaces, and hyphens allowed.">
-            </label>
+        <label>
+            Organizational Title
+            <input type="text" name="orgTitle" autocomplete="organization-title" placeholder="eg. Sales Manager"
+                pattern="[A-Za-z\s\-]{7,}"
+                title="Organizational Title within organization. Minimum 7 characters. Only letters, spaces, and hyphens allowed.">
+        </label>
         
             <label>
                 Email Address
@@ -114,27 +114,28 @@
         </form>
         
        
-        <section class="membership-sidebar">
-            <h2>Membership Levels</h2>
-            <div class="cards-grid">
-                <div class="membership-card">
-                    <h3>NP Membership</h3>
-                    <button type="button" class="modal-link" onclick="openModal('np')">Get Additional Information</button>
-                </div>
-                <div class="membership-card">
-                    <h3>Bronze Membership</h3>
-                    <button type="button" class="modal-link" onclick="openModal('bronze')">Get Additional Information</button>
-                </div>
-                <div class="membership-card silver">
-                    <h3>Silver Membership</h3>
-                    <button type="button" class="modal-link" onclick="openModal('silver')">Get Additional Information</button>
-                </div>
-                <div class="membership-card gold">
-                    <h3>Gold Membership</h3>
-                    <button type="button" class="modal-link" onclick="openModal('gold')">Get Additional Information</button>
-                </div>
+    <section class="membership-sidebar">
+        <h2>Membership Levels</h2>
+        <div class="cards-grid">
+            <div class="membership-card">
+                <h3>NP Membership</h3>
+                <button type="button" class="modal-link" data-membership="np">Get Additional Information</button>
             </div>
-        </section>
+            <div class="membership-card">
+                <h3>Bronze Membership</h3>
+                <button type="button" class="modal-link" data-membership="bronze">Get Additional Information</button>
+            </div>
+            <div class="membership-card silver">
+                <h3>Silver Membership</h3>
+                <button type="button" class="modal-link" data-membership="silver">Get Additional Information</button>
+            </div>
+            <div class="membership-card gold">
+                <h3>Gold Membership</h3>
+                <button type="button" class="modal-link" data-membership="gold">Get Additional Information</button>
+            </div>
+        </div>
+    </section>
+    
        
         
         
