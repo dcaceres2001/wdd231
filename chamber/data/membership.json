@@ -1,0 +1,44 @@
+
+
+{
+    "np": {
+        "title": "NP Membership Details",
+        "cost": "$0 (Free for Non-Profit Organizations)",
+        "benefits": [
+            "Basic inclusion in the member directory",
+            "Access to standard community training sessions",
+            "General admission discounts for community networking events"
+        ]
+    },
+    "bronze": {
+        "title": "Bronze Membership Details",
+        "cost": "$150 / year",
+        "benefits": [
+            "Standard listing in our business directory",
+            "Access to monthly general training webinars",
+            "10% discount on official event tickets"
+        ]
+    },
+    "silver": {
+        "title": "Silver Membership Details",
+        "cost": "$350 / year",
+        "benefits": [
+            "Priority listing in the directory with company logo",
+            "2 free passes to quarterly regional networking events",
+            "1 quarterly training session slot for up to 3 staff members",
+            "Acknowledgment in the new member monthly email newsletter"
+        ]
+    },
+    "gold": {
+        "title": "Gold Membership Details",
+        "cost": "$750 / year",
+        "benefits": [
+            "Top-tier spotlight placement on the homepage directory",
+            "Unlimited access to all training and certification programs",
+            "4 VIP passes to all special events and annual gala",
+            "Monthly dedicated social media spotlight features",
+            "Exclusive invitations to private executive roundtable discussions"
+        ]
+    }
+}
+

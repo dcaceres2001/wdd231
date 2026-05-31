@@ -92,6 +92,8 @@ function displayCourses(filteredList) {
         const courseItem = document.createElement('div');
         courseItem.classList.add('course-item');
 
+        courseItem.addEventListener('click', () => showCourseDetails(course));
+
         
         if (course.completed) courseItem.classList.add('completed');
 
@@ -128,4 +130,33 @@ function updateTotalCredits(list) {
 // Initial display of all courses and total credits//
 displayCourses(courses);
 updateTotalCredits(courses);
+
+
+// Function to show course details in a modal
+
+const courseDetails = document.getElementById('course-details');
+
+
+
+
+function showCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="close-modal">Close</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits:</strong> ${course.credits}</p>
+        <p><strong>Certificate:</strong> ${course.certificate}</p>
+        <p><strong>Description:</strong> ${course.description}</p>
+        <p><strong>Technology:</strong> ${course.technology.join(', ')}</p>
+    `;
+    
+    courseDetails.showModal();
+
+    const closeModalBtn = document.getElementById('close-modal');
+
+    closeModalBtn.addEventListener('click', () => {
+        courseDetails.close();
+    });
+}
 
