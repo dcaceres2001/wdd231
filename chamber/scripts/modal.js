@@ -61,6 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+const modal = document.getElementById('membership-modal');
+const closeBtn = document.getElementById('close-modal-btn');
+
+
+closeBtn.addEventListener('click', () => {
+    modal.close();
+});
 
 
 // Function to open the Thank You modal with form data

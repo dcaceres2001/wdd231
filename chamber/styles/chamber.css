@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #2c3e50;
-    --secondary-color: #B65E12;
+    --secondary-color: #A0500A;
     --accent-color: #34495e;
     --bg-light: #f4f4f4;
     --text-main: #333333;
@@ -666,7 +666,7 @@ footer {
     background: none;
     border: none;
     font-family: "Montserrat", sans-serif;
-    color: var(--secondary-color);
+    color: #9a4e0c;;
     text-decoration: underline;
     font-weight: 600;
     padding: 0;
