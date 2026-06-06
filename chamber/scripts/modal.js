@@ -1,7 +1,6 @@
 // Function to open the membership details modal and populate it with data from the JSON file
-
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     async function openModal(level) {
         const modal = document.getElementById('membership-modal');
         const contentContainer = document.getElementById('modal-content');
@@ -41,40 +40,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-   
     const cardsGrid = document.querySelector('.cards-grid');
 
-    
     if (cardsGrid) {
         cardsGrid.addEventListener('click', (event) => {
-            
             const button = event.target.closest('.modal-link');
-
             if (button) {
-                
                 const membershipLevel = button.dataset.membership;
-
-                
                 openModal(membershipLevel);
             }
         });
     }
 });
 
+
 const modal = document.getElementById('membership-modal');
 const closeBtn = document.getElementById('close-modal-btn');
 
+if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => {
+        modal.close();
+    });
+} 
 
-closeBtn.addEventListener('click', () => {
-    modal.close();
-});
-
-
-// Function to open the Thank You modal with form data
 
 function displayFormData() {
     const urlParams = new URLSearchParams(window.location.search);
     const contentContainer = document.getElementById('summary-content');
+
+    
+    if (!contentContainer) {
+        return;
+    }
 
     if (!urlParams.has('firstName') && !urlParams.has('email')) {
         contentContainer.innerHTML = '<p style="color: #c0392b; font-weight: bold;">No application data found in the request.</p>';
@@ -88,6 +85,13 @@ function displayFormData() {
         'gold': 'Gold Membership'
     };
 
+    
+    const rawTimestamp = urlParams.get('timestamp');
+    let formattedDate = new Date().toLocaleString();
+    if (rawTimestamp && !isNaN(rawTimestamp)) {
+        formattedDate = new Date(parseInt(rawTimestamp)).toLocaleString();
+    }
+
     const data = {
         'Applicant Name': `${urlParams.get('firstName') || ''} ${urlParams.get('lastName') || ''}`.trim(),
         'Organizational Title': urlParams.get('orgTitle') || 'Not provided',
@@ -96,28 +100,36 @@ function displayFormData() {
         'Organization Name': urlParams.get('organization') || '',
         'Membership Level': membershipLabels[urlParams.get('membershipLevel')] || urlParams.get('membershipLevel') || '',
         'Description': urlParams.get('description') || 'Not provided',
-        'Submission Time': urlParams.get('timestamp')
-            ? new Date(parseInt(urlParams.get('timestamp'))).toLocaleString()
-            : new Date().toLocaleString()
+        'Submission Time': formattedDate
     };
 
     let htmlOutput = '';
     for (const [key, value] of Object.entries(data)) {
         htmlOutput += `
-                    <div class="summary-item">
-                        <span class="label">${key}</span>
-                        <span class="value">${escapeHTML(value)}</span>
-                    </div>
-                `;
+            <div class="summary-item">
+                <span class="label"><strong>${key}:</strong></span>
+                <span class="value">${escapeHTML(value)}</span>
+            </div>
+        `;
     }
 
     contentContainer.innerHTML = htmlOutput;
 }
 
+
 function escapeHTML(str) {
-    return str.replace(/[&<>'"]/g,
-        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-    );
+    if (!str) return '';
+    return str.replace(/[&<>'"]/g, tag => {
+        const chars = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+        };
+        return chars[tag] || tag;
+    });
 }
+
 
 document.addEventListener('DOMContentLoaded', displayFormData);

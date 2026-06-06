@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce Main Page</title>
+    <title>Chamber of Commerce Discover</title>
     <meta name="description"
         content="WDD 231 – Web Frontend Development I- Douglas Caceres-This is my website, designed to test my new skills">
     <meta name="author" content="Douglas Caceres">
@@ -37,66 +37,33 @@
 <body>
     <header>
         <img src="images/volcano_icon_126033.svg" alt="Chamber Logo">
-       
+
         <span>Chamber of Commerce</span>
-        
+
         <button id="ham-btn" class="hamburger" aria-label="Toggle Menu"></button>
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Business Directory</a></li>
-            <li><a href="discover.html">Discover</a></li>
+            <li class="current"><a href="discover.html">Discover</a></li>
             <li><a href="join.html">Join</a></li>
         </ul>
     </nav>
-    <main class="sections home-layout">
-        <h1 class="page-title">Guatemala</h1>
-        <section class="hero-container">
-            <picture>
-                <source media="(min-width: 768px)" srcset="images/volcanes-large.jpg">
-                <img src="images/volcanes-small.jpeg" alt="Volcano View Center" loading="eager">
-            </picture>
-            <div class="cta-box">
-                <h2>Explore Opportunities</h2>
-                <a href="join.html" class="cta-button">Join the Chamber</a>
-            </div>
+    <main>
+        <!-- Container for dynamic localStorage messages -->
+        <div id="visit-message" class="visit-message"></div>
+    
+        <h1>Discover the Volcanoes of Guatemala</h1>
+        <p class="intro-text">Explore the monumental geological features and natural landscapes driving sustainable tourism
+            and economic growth in our chamber's region.</p>
+    
+        <!-- Main responsive container using Grid Template Areas -->
+        <section id="volcanoes-gallery" class="gallery-container">
+            <!-- The 8 cards are dynamically injected by js/discover.js -->
         </section>
-
-     
-        <section class="about events-panel">
-            <h2>Upcoming Events</h2>
-            <div class="panel-content">
-                <article>
-                    <h3>Summit Business Expo</h3>
-                    <p>Networking and live product presentations near the peaks.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="about weather-panel">
-            <h2>Local Weather</h2>
-            <div class="weather-info panel-content">
-                <div class="weather-main">
-                    <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="small weather icon">
-                    <p class="current-temp"><span id="temperature"></span>&deg;C</p>
-                </div>
-                <p id="condition" class="weather-desc"></p>
-                <hr>
-                <p>Wind Speed: <span id="windspeed"></span> m/s</p>
-                <p>Wind Chill: <span id="windchill"></span></p>
-            </div>
-        </section>
-
-        <section class="spotlight-section">
-            <h2>Business Spotlights</h2>
-            <div id="spotlight-container" class="spotlight-grid">
-               
-            </div>
-        </section>
-
-
     </main>
+
     <footer>
         <div class="social">
             <a href="https://www.facebook.com/douglasrene.caceres" target="_blank"><img src="images/facebook.svg"
@@ -110,8 +77,8 @@
         </div>
         <p>&copy; <span id="currentYear"></span> Douglas Caceres. Guatemala.</p>
         <p id="lastModified">last modified: </p>
-
+    
     </footer>
-</body>
-
-</html>
+    </body>
+    
+    </html>
