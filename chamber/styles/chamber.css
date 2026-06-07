@@ -804,6 +804,11 @@ dialog::backdrop {
     color: var(--secondary-color);
 }
 
+#volcano-modal {
+    display: none;
+}
+
+
 /* volcanoes gallery */
 
 .gallery-container {
