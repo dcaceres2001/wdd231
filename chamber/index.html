@@ -37,9 +37,9 @@
 <body>
     <header>
         <img src="images/volcano_icon_126033.svg" alt="Chamber Logo">
-       
+
         <span>Chamber of Commerce</span>
-        
+
         <button id="ham-btn" class="hamburger" aria-label="Toggle Menu"></button>
     </header>
     <nav id="nav-bar" class="navigation">
@@ -55,7 +55,7 @@
         <section class="hero-container">
             <picture>
                 <source media="(min-width: 768px)" srcset="images/volcanes-large.jpg">
-                <img src="images/volcanes-small.jpeg" alt="Volcano View Center" loading="eager">
+                <img src="images/volcanes-small.jpeg" alt="Volcano View Center" loading="eager" fetchpriority="high">
             </picture>
             <div class="cta-box">
                 <h2>Explore Opportunities</h2>
@@ -63,7 +63,7 @@
             </div>
         </section>
 
-     
+
         <section class="about events-panel">
             <h2>Upcoming Events</h2>
             <div class="panel-content">
@@ -75,23 +75,48 @@
         </section>
 
         <section class="about weather-panel">
-            <h2>Local Weather</h2>
+            <h2>Chamber Location Weather</h2>
             <div class="weather-info panel-content">
-                <div class="weather-main">
-                    <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="small weather icon">
-                    <p class="current-temp"><span id="temperature"></span>&deg;C</p>
+
+                <div class="weather-current-block">
+                    <h3>Current Conditions</h3>
+                    <div class="weather-main">
+                        <img id="weather-icon"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                            alt="Current weather icon">
+                        <p class="current-temp"><span id="temperature"></span>&deg;C</p>
+                    </div>
+                    <p id="condition" class="weather-desc"></p>
                 </div>
-                <p id="condition" class="weather-desc"></p>
+
                 <hr>
-                <p>Wind Speed: <span id="windspeed"></span> m/s</p>
-                <p>Wind Chill: <span id="windchill"></span></p>
+
+
+                <h3>3-Day Forecast</h3>
+                <div class="forecast-container">
+                    <div class="forecast-card">
+                        <p id="day1-name" class="forecast-date">Day 1</p>
+                        <img id="day1-icon" src="" alt="Forecast day 1 icon">
+                        <p class="forecast-temp"><span id="day1-temp"></span>&deg;C</p>
+                    </div>
+                    <div class="forecast-card">
+                        <p id="day2-name" class="forecast-date">Day 2</p>
+                        <img id="day2-icon" src="" alt="Forecast day 2 icon">
+                        <p class="forecast-temp"><span id="day2-temp"></span>&deg;C</p>
+                    </div>
+                    <div class="forecast-card">
+                        <p id="day3-name" class="forecast-date">Day 3</p>
+                        <img id="day3-icon" src="" alt="Forecast day 3 icon">
+                        <p class="forecast-temp"><span id="day3-temp"></span>&deg;C</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="spotlight-section">
             <h2>Business Spotlights</h2>
             <div id="spotlight-container" class="spotlight-grid">
-               
+
             </div>
         </section>
 

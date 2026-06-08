@@ -487,44 +487,126 @@ footer {
 }
 
 /* Weather Panel */
+.weather-panel {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.weather-panel h2 {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin: 0 0 1.25rem 0;
+}
+
 .weather-info {
-    text-align: center;
+    background: var(--bg-color, #fff);
+    border: 0.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.weather-current-block h3 {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted-color, #888);
+    margin: 0 0 1rem 0;
 }
 
 .weather-main {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 0;
+    justify-content: flex-start;
+    margin-bottom: 0.25rem;
 }
 
 .weather-main img {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
 }
 
 .current-temp {
-    font-size: 2.2rem;
-    font-weight: bold;
+    font-family: 'DM Mono', monospace;
+    font-size: 3.2rem;
+    font-weight: 300;
+    letter-spacing: -2px;
+    line-height: 1;
     margin: 0;
 }
 
 .weather-desc {
-    font-weight: 600;
-    margin: 5px 0 15px 0;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--accent-color);
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    margin: 0.5rem 0 0 0;
 }
 
 .weather-info hr {
-    border: 0;
-    border-top: 1px solid var(--border-color);
-    margin: 15px 0;
+    border: none;
+    border-top: 0.5px solid var(--border-color);
+    margin: 1.25rem 0;
 }
 
-.weather-info p {
-    margin: 5px 0;
+.weather-info h3.forecast-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted-color, #888);
+    margin: 0 0 0.875rem 0;
 }
 
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.forecast-card {
+    background: var(--surface-color, #f5f5f5);
+    border: 0.5px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.forecast-card:hover {
+    border-color: var(--accent-color);
+    background: var(--bg-color, #fff);
+}
+
+.forecast-date {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted-color, #888);
+    margin: 0 0 0.375rem 0;
+}
+
+.forecast-card img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 0.25rem;
+}
+
+.forecast-temp {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
 /*** join page styles ***/
 
 
