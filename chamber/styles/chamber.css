@@ -10,6 +10,9 @@
     --border-color: #bdc3c7;
     --completed-color: #d5e6d5;
     --completed-border: #27ae60;
+    --muted-color: #666666;
+    --bg-color: #ffffff;
+    --surface-color: #f4f4f4;
 }
 
 header,
