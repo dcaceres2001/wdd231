@@ -795,7 +795,7 @@ dialog::backdrop {
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
-    color: var(--border-color);
+    color: #000000;
     transition: color 0.2s ease;
     line-height: 1;
 }

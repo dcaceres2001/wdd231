@@ -12,10 +12,10 @@
 
 
     <link rel="stylesheet" href="styles/chamber.css">
-    <link rel="stylesheet" href="styles/chamberlarge.css" >
+    <link rel="stylesheet" href="styles/chamberlarge.css">
 
     <script src="scripts/chamber.js" defer></script>
-    <script src="scripts/discover.js" type="module" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
 
     <meta property="og:title" content="Chamber of Commerce">
     <meta property="og:description"
@@ -41,34 +41,37 @@
 
         <button id="ham-btn" class="hamburger" aria-label="Toggle Menu"></button>
     </header>
-<main>   
-    <nav id="nav-bar" class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html">Business Directory</a></li>
-            <li class="current"><a href="discover.html">Discover</a></li>
-            <li><a href="join.html">Join</a></li>
-        </ul>
-    </nav>
-    <div>
-        <div id="visit-message" class="visit-message"></div>
-        <h1>Discover the Volcanoes of Guatemala</h1>
-        <div class="intro-banner-container">
-        <p class="intro-text">Explore the monumental geological features and natural landscapes driving sustainable
-            tourism
-            and economic growth in our chamber's region.</p>
-        </div>    
-    
-        <section id="volcanoes-gallery" class="gallery-container">
-        </section>
-        <div id="volcano-modal" class="modal-overlay" >
-            <div class="modal-content">
-                <span id="close-modal" class="close-button">Close</span>
-                <h3 id="modal-title">Volcano Name</h3>
-                <p id="modal-details">Volcano details will go here...</p>
-            </div>
+    <main>
+        <div>
+            <nav id="nav-bar" class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Business Directory</a></li>
+                    <li class="current"><a href="discover.html">Discover</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
         </div>
-</main>
+        <div>
+            <div id="visit-message" class="visit-message"></div>
+            <h1>Discover the Volcanoes of Guatemala</h1>
+            <div class="intro-banner-container">
+                <p class="intro-text">Explore the monumental geological features and natural landscapes driving
+                    sustainable
+                    tourism
+                    and economic growth in our chamber's region.</p>
+            </div>
+
+            <div id="volcanoes-gallery" class="gallery-container"></div>
+
+            <div id="volcano-modal" class="modal-overlay">
+                <div class="modal-content">
+                    <span id="close-modal" class="close-button">Close</span>
+                    <h2 id="modal-title">Volcano Name</h2>
+                    <p id="modal-details">Volcano details will go here...</p>
+                </div>
+            </div>
+    </main>
 
     <footer>
         <div class="social">
