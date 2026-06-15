@@ -1,6 +1,9 @@
 // ============================================================
 //  THE WOOD GUILD — script.js
+//  ES Module: imports render functions from render.js
 // ============================================================
+
+import { renderProjects, renderTools, renderShops } from './render.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -59,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================
-  //  PROJECTS PAGE
+  //  PROJECTS PAGE — async/await with try/catch
   // ==========================================================
   const projectsGrid = document.getElementById('projects-grid');
 
@@ -68,45 +71,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const noResults = document.getElementById('no-results');
     let allProjects = [];
 
-    fetch('data/projects.json')
-      .then(res => res.json())
-      .then(data => {
+    async function loadProjects() {
+      try {
+        const res = await fetch('data/projects.json');
+        const data = await res.json();
         allProjects = data;
-        renderProjects(allProjects);
-        initFilters(filterButtons, renderProjects, allProjects);
-      })
-      .catch(err => {
+        renderProjects(allProjects, projectsGrid, noResults);
+        initFilters(filterButtons, (filtered) => {
+          renderProjects(filtered, projectsGrid, noResults);
+        }, allProjects);
+      } catch (err) {
         projectsGrid.innerHTML = '<p>Sorry, projects could not be loaded.</p>';
         console.error('Error loading projects:', err);
-      });
-
-    function renderProjects(projects) {
-      projectsGrid.innerHTML = '';
-      noResults.hidden = projects.length > 0;
-
-      projects.forEach(project => {
-        const card = document.createElement('article');
-        card.classList.add('project-card');
-        card.innerHTML = `
-          <img src="${project.image}" alt="${project.alt}" loading="lazy" />
-          <div class="card-body">
-            <span class="tag">${project.category}</span>
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <ul class="card-meta">
-              <li><span class="meta-label">Wood</span> ${project.wood}</li>
-              <li><span class="meta-label">Finish</span> ${project.finish}</li>
-              <li><span class="meta-label">Skill</span> ${project.skill}</li>
-            </ul>
-          </div>
-        `;
-        projectsGrid.appendChild(card);
-      });
+      }
     }
+
+    loadProjects();
   }
 
   // ==========================================================
-  //  TOOLS PAGE
+  //  TOOLS PAGE — async/await with try/catch
   // ==========================================================
   const toolsList = document.getElementById('tools-list');
 
@@ -115,50 +99,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const noResults = document.getElementById('no-results');
     let allTools = [];
 
-    fetch('data/tools.json')
-      .then(res => res.json())
-      .then(data => {
+    async function loadTools() {
+      try {
+        const res = await fetch('data/tools.json');
+        const data = await res.json();
         allTools = data;
-        renderTools(allTools);
-        initFilters(filterButtons, renderTools, allTools);
-      })
-      .catch(err => {
+        renderTools(allTools, toolsList, noResults);
+        initFilters(filterButtons, (filtered) => {
+          renderTools(filtered, toolsList, noResults);
+        }, allTools);
+      } catch (err) {
         toolsList.innerHTML = '<p>Sorry, tools could not be loaded.</p>';
         console.error('Error loading tools:', err);
-      });
-
-    function renderTools(tools) {
-      toolsList.innerHTML = '';
-      noResults.hidden = tools.length > 0;
-
-      tools.forEach(tool => {
-        const card = document.createElement('article');
-        card.classList.add('tool-card');
-        card.innerHTML = `
-          <div class="tool-card-image">
-            <img src="${tool.image}" alt="${tool.alt}" loading="lazy" />
-          </div>
-          <div class="tool-card-body">
-            <div class="tool-card-header">
-              <span class="tag">${tool.category}</span>
-              <span class="skill-badge skill-${tool.skill.toLowerCase()}">${tool.skill}</span>
-            </div>
-            <h3>${tool.name}</h3>
-            <p>${tool.description}</p>
-            <ul class="card-meta">
-              <li><span class="meta-label">Type</span> ${tool.type}</li>
-              <li><span class="meta-label">Brand</span> ${tool.brand}</li>
-              <li><span class="meta-label">Best For</span> ${tool.use}</li>
-            </ul>
-          </div>
-        `;
-        toolsList.appendChild(card);
-      });
+      }
     }
+
+    loadTools();
   }
 
   // ==========================================================
-  //  SHOPS PAGE
+  //  SHOPS PAGE — async/await with try/catch
   // ==========================================================
   const shopsGrid = document.getElementById('shops-grid');
   const modal = document.getElementById('shop-modal');
@@ -168,54 +128,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const noResults = document.getElementById('no-results');
     let allShops = [];
 
-    fetch('data/shops.json')
-      .then(res => res.json())
-      .then(data => {
+    async function loadShops() {
+      try {
+        const res = await fetch('data/shops.json');
+        const data = await res.json();
         allShops = data;
-        renderShops(allShops);
-        initFilters(filterButtons, renderShops, allShops);
-      })
-      .catch(err => {
+        renderShops(allShops, shopsGrid, noResults, allShops, openModal);
+        initFilters(filterButtons, (filtered) => {
+          renderShops(filtered, shopsGrid, noResults, allShops, openModal);
+        }, allShops);
+      } catch (err) {
         shopsGrid.innerHTML = '<p>Sorry, shops could not be loaded.</p>';
         console.error('Error loading shops:', err);
-      });
-
-    // ── Render shop cards ────────────────────────────
-    function renderShops(shops) {
-      shopsGrid.innerHTML = '';
-      noResults.hidden = shops.length > 0;
-
-      shops.forEach(shop => {
-        const card = document.createElement('article');
-        card.classList.add('shop-card');
-        card.innerHTML = `
-          <div class="shop-card-image">
-            <img src="${shop.image}" alt="${shop.alt}" loading="lazy" />
-          </div>
-          <div class="shop-card-body">
-            <div class="shop-card-header">
-              <span class="tag tag-${shop.type}">${shop.type === 'local' ? 'Local' : 'Online'}</span>
-              <span class="price-range">${shop.priceRange}</span>
-            </div>
-            <h3>${shop.name}</h3>
-            <p class="shop-city">${shop.city}</p>
-            <p class="shop-tagline">${shop.tagline}</p>
-            <button class="guild-btn btn-filled shop-details-btn" data-id="${shop.id}">View Details</button>
-          </div>
-        `;
-        shopsGrid.appendChild(card);
-      });
-
-      // Attach click events to all detail buttons
-      document.querySelectorAll('.shop-details-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const shop = allShops.find(s => s.id === parseInt(btn.dataset.id));
-          if (shop) openModal(shop);
-        });
-      });
+      }
     }
 
-    // ── Open modal ───────────────────────────────────
+    // ── Open modal ─────────────────────────────────────
     function openModal(shop) {
       document.getElementById('modal-img').src = shop.image;
       document.getElementById('modal-img').alt = shop.alt;
@@ -230,39 +158,32 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('modal-visit-btn').href = shop.website;
       document.getElementById('modal-map-btn').href = shop.mapsUrl;
 
-
       const specList = document.getElementById('modal-specialties');
       specList.innerHTML = shop.specialties
         .map(s => `<li><span class="specialty-tag">${s}</span></li>`)
         .join('');
-
 
       const mapBtn = document.getElementById('modal-map-btn');
       mapBtn.style.display = shop.type === 'local' ? 'inline-block' : 'none';
 
       modal.hidden = false;
       document.body.classList.add('modal-open');
-
-
       modal.querySelector('.modal-close').focus();
     }
 
-    // ── Close modal ──────────────────────────────────
+    // ── Close modal ────────────────────────────────────
     function closeModal() {
       modal.hidden = true;
       document.body.classList.remove('modal-open');
     }
 
-    // Close on X button
     modal.querySelector('.modal-close').addEventListener('click', closeModal);
-
-    // Close on overlay click
     modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
-
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !modal.hidden) closeModal();
     });
+
+    loadShops();
   }
 
   // ==========================================================
@@ -320,4 +241,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-}); 
+}); // end DOMContentLoaded
