@@ -294,6 +294,7 @@ main section {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+    justify-content: center;
     max-width: 100%;
     padding: 5rem 1.5rem 4.5rem;
 }
@@ -303,10 +304,7 @@ main section {
     max-width: calc(var(--max-w) / 2);
 }
 
-#hero {
 
-    justify-content: center;
-}
 
 .hero-text {
     max-width: 520px;
@@ -440,12 +438,10 @@ main section {
     gap: 4rem;
     align-items: center;
     padding: 5rem 1.5rem;
-}
-
-
-#tools {
     width: 100%;
 }
+
+
 
 .tool-image img {
     width: 100%;
@@ -518,6 +514,9 @@ main section {
     box-shadow: var(--shadow);
     padding: 1.3rem 1.4rem;
     border-top: 3px solid var(--sawdust);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     transition: transform .2s, box-shadow .2s;
 }
 
@@ -1167,21 +1166,7 @@ main section {
     padding: 0 1.5rem;
 }
 
-/*  Shop Card  */
-.shop-card {
-    background-color: var(--surface);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform .25s, box-shadow .25s;
-}
 
-.shop-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(44, 36, 22, 0.15);
-}
 
 .shop-card-image {
     overflow: hidden;
@@ -1248,14 +1233,14 @@ main section {
 }
 
 /*  Outline dark button (for modal)  */
-.btn-outline-dark {
+.btn-secondary-dark {
     background-color: transparent;
     color: var(--charcoal);
     border: 1px solid var(--grain);
     font-weight: 400;
 }
 
-.btn-outline-dark:hover {
+.btn-secondary-dark:hover {
     border-color: var(--oak);
     color: var(--oak);
 }
