@@ -631,7 +631,216 @@ main section {
     text-align: center;
     padding: 4rem 1.5rem 3.5rem;
     border-bottom: 3px solid var(--oak);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
+
+#page-banner .eyebrow {
+    color: var(--sawdust);
+    margin-bottom: .5rem;
+}
+
+#page-banner h1 {
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+.banner-sub {
+    color: #b0a090;
+    font-weight: 300;
+    font-size: 1rem;
+    max-width: 540px;
+
+}
+
+/*  Filter Bar  */
+#filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    max-width: var(--max-w);
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .45rem 1.1rem;
+    border-radius: 20px;
+    border: 1px solid var(--grain);
+    background-color: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.filter-btn:hover {
+    border-color: var(--sawdust);
+    color: var(--oak);
+}
+
+.filter-btn.active {
+    background-color: var(--sawdust);
+    border-color: var(--sawdust);
+    color: var(--charcoal);
+    font-weight: 600;
+}
+
+/*  Projects Grid (projects page)  */
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: var(--max-w);
+    margin: 2rem auto 5rem;
+    padding: 0 1.5rem;
+}
+
+/*  Card meta (wood / finish / skill)  */
+.card-meta {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem 1.2rem;
+    margin-top: auto;
+    padding-top: .8rem;
+    border-top: 1px solid var(--grain);
+    font-size: .8rem;
+    color: var(--muted);
+}
+
+.meta-label {
+    font-family: var(--font-mono);
+    font-size: .65rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--oak);
+    margin-right: .2rem;
+}
+
+/*  No results message  */
+#no-results {
+    text-align: center;
+    color: var(--muted);
+    font-style: italic;
+    padding: 3rem 1.5rem;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+/*  Active nav link  */
+.nav-links a.active {
+    color: var(--sawdust);
+}
+
+
+#page-banner .eyebrow {
+    color: var(--sawdust);
+    justify-content: center;
+}
+
+#page-banner h1 {
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+.banner-sub {
+    color: #b0a090;
+    font-weight: 300;
+    font-size: 1rem;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+/*  Filter Bar  */
+#filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    max-width: var(--max-w);
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+}
+
+.filter-btn {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .45rem 1.1rem;
+    border-radius: 20px;
+    border: 1px solid var(--grain);
+    background-color: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.filter-btn:hover {
+    border-color: var(--sawdust);
+    color: var(--oak);
+}
+
+.filter-btn.active {
+    background-color: var(--sawdust);
+    border-color: var(--sawdust);
+    color: var(--charcoal);
+    font-weight: 600;
+}
+
+/*  Projects Grid (projects page)  */
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: var(--max-w);
+    margin: 2rem auto 5rem;
+    padding: 0 1.5rem;
+}
+
+/*  Card meta (wood / finish / skill)  */
+.card-meta {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem 1.2rem;
+    margin-top: .8rem;
+    padding-top: .8rem;
+    border-top: 1px solid var(--grain);
+    font-size: .8rem;
+    color: var(--muted);
+}
+
+.meta-label {
+    font-family: var(--font-mono);
+    font-size: .65rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--oak);
+    margin-right: .2rem;
+}
+
+/*  No results message  */
+#no-results {
+    text-align: center;
+    color: var(--muted);
+    font-style: italic;
+    padding: 3rem 1.5rem;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+/*  Active nav link  */
+.nav-links a.active {
+    color: var(--sawdust);
+}
+
 
 #page-banner .eyebrow {
     color: var(--sawdust);

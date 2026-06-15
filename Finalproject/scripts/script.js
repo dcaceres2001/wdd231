@@ -45,14 +45,41 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================
-  //  SHARED — Filter button logic
+  //  SHARED — Filter button logic with localStorage
+  //  storageKey: unique key per page so projects and tools
+  //  filters are stored independently
   // ==========================================================
-  function initFilters(filterButtons, renderFn, allItems) {
+  function initFilters(filterButtons, renderFn, allItems, storageKey) {
+
+    // Read the saved filter from localStorage, default to 'all'
+    const savedFilter = localStorage.getItem(storageKey) || 'all';
+
+    // Apply the saved filter on page load
+    filterButtons.forEach(btn => {
+      if (btn.dataset.filter === savedFilter) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Render with the saved filter immediately
+    const savedResult = savedFilter === 'all'
+      ? allItems
+      : allItems.filter(item => item.category === savedFilter || item.type === savedFilter);
+    renderFn(savedResult);
+
+    // Attach click events
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+
         const filter = btn.dataset.filter;
+
+        // Save selected filter to localStorage
+        localStorage.setItem(storageKey, filter);
+
         const result = filter === 'all'
           ? allItems
           : allItems.filter(item => item.category === filter || item.type === filter);
@@ -76,10 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const res = await fetch('data/projects.json');
         const data = await res.json();
         allProjects = data;
-        renderProjects(allProjects, projectsGrid, noResults);
+
+        // Pass 'guild_projects_filter' as the localStorage key
         initFilters(filterButtons, (filtered) => {
           renderProjects(filtered, projectsGrid, noResults);
-        }, allProjects);
+        }, allProjects, 'guild_projects_filter');
+
       } catch (err) {
         projectsGrid.innerHTML = '<p>Sorry, projects could not be loaded.</p>';
         console.error('Error loading projects:', err);
@@ -104,10 +133,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const res = await fetch('data/tools.json');
         const data = await res.json();
         allTools = data;
-        renderTools(allTools, toolsList, noResults);
+
+        // Pass 'guild_tools_filter' as the localStorage key
         initFilters(filterButtons, (filtered) => {
           renderTools(filtered, toolsList, noResults);
-        }, allTools);
+        }, allTools, 'guild_tools_filter');
+
       } catch (err) {
         toolsList.innerHTML = '<p>Sorry, tools could not be loaded.</p>';
         console.error('Error loading tools:', err);
@@ -136,14 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
         renderShops(allShops, shopsGrid, noResults, allShops, openModal);
         initFilters(filterButtons, (filtered) => {
           renderShops(filtered, shopsGrid, noResults, allShops, openModal);
-        }, allShops);
+        }, allShops, 'guild_shops_filter');
       } catch (err) {
         shopsGrid.innerHTML = '<p>Sorry, shops could not be loaded.</p>';
         console.error('Error loading shops:', err);
       }
     }
 
-    // ── Open modal ─────────────────────────────────────
     function openModal(shop) {
       document.getElementById('modal-img').src = shop.image;
       document.getElementById('modal-img').alt = shop.alt;
@@ -171,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.querySelector('.modal-close').focus();
     }
 
-    // ── Close modal ────────────────────────────────────
     function closeModal() {
       modal.hidden = true;
       document.body.classList.remove('modal-open');
@@ -187,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================
-  //  ABOUT PAGE — Join form validation
+  //  ABOUT PAGE — Join form validation + URL Search Params
   // ==========================================================
   const joinForm = document.getElementById('join-form');
 
@@ -199,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
       function setError(fieldId, errorId, message) {
         const field = document.getElementById(fieldId);
         const error = document.getElementById(errorId);
+        if (!field || !error) return;
         if (message) {
           field.classList.add('invalid');
           error.textContent = message;
@@ -209,35 +239,59 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      const name = document.getElementById('name').value.trim();
-      setError('name', 'name-error', name ? '' : 'Please enter your name.');
+      // Validate name
+      const nameEl = document.getElementById('name');
+      const nameValue = nameEl ? nameEl.value.trim() : '';
+      setError('name', 'name-error', nameValue ? '' : 'Please enter your name.');
 
-      const email = document.getElementById('email').value.trim();
+      // Validate email
+      const emailEl = document.getElementById('email');
+      const emailValue = emailEl ? emailEl.value.trim() : '';
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!email) {
+      if (!emailValue) {
         setError('email', 'email-error', 'Please enter your email address.');
-      } else if (!emailPattern.test(email)) {
+      } else if (!emailPattern.test(emailValue)) {
         setError('email', 'email-error', 'Please enter a valid email address.');
       } else {
         setError('email', 'email-error', '');
       }
 
-      const skill = document.getElementById('skill').value;
-      setError('skill', 'skill-error', skill ? '' : 'Please select your skill level.');
+      // Validate skill level
+      const skillEl = document.getElementById('skill');
+      const skillValue = skillEl ? skillEl.value : '';
+      const skillText = skillEl && skillEl.selectedIndex >= 0
+        ? skillEl.options[skillEl.selectedIndex].text : '';
+      setError('skill', 'skill-error', skillValue ? '' : 'Please select your skill level.');
 
+      // Capture interest (optional)
+      const interestEl = document.getElementById('interest');
+      const interestText = interestEl && interestEl.selectedIndex >= 0
+        ? interestEl.options[interestEl.selectedIndex].text : 'None selected';
+
+      // If valid — build URL params and redirect
       if (valid) {
+        const params = new URLSearchParams();
+        params.set('name', nameValue);
+        params.set('email', emailValue);
+        params.set('skill', skillText);
+        params.set('interest', interestText);
+
         joinForm.reset();
-        const success = document.getElementById('form-success');
-        success.hidden = false;
-        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        window.location.href = `thank-you.html?${params.toString()}`;
       }
     });
 
+    // Real-time error clearing
     ['name', 'email', 'skill'].forEach(id => {
-      document.getElementById(id).addEventListener('input', () => {
-        document.getElementById(id).classList.remove('invalid');
-        document.getElementById(`${id}-error`).textContent = '';
-      });
+      const element = document.getElementById(id);
+      if (element) {
+        const eventType = element.tagName === 'SELECT' ? 'change' : 'input';
+        element.addEventListener(eventType, () => {
+          element.classList.remove('invalid');
+          const errorEl = document.getElementById(`${id}-error`);
+          if (errorEl) errorEl.textContent = '';
+        });
+      }
     });
   }
 
