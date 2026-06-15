@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>${shop.name}</h3>
             <p class="shop-city">${shop.city}</p>
             <p class="shop-tagline">${shop.tagline}</p>
-            <button class="btn btn-primary shop-details-btn" data-id="${shop.id}">View Details</button>
+            <button class="guild-btn btn-filled shop-details-btn" data-id="${shop.id}">View Details</button>
           </div>
         `;
         shopsGrid.appendChild(card);
@@ -230,20 +230,20 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('modal-visit-btn').href = shop.website;
       document.getElementById('modal-map-btn').href = shop.mapsUrl;
 
-      
+
       const specList = document.getElementById('modal-specialties');
       specList.innerHTML = shop.specialties
         .map(s => `<li><span class="specialty-tag">${s}</span></li>`)
         .join('');
 
-      
+
       const mapBtn = document.getElementById('modal-map-btn');
       mapBtn.style.display = shop.type === 'local' ? 'inline-block' : 'none';
 
       modal.hidden = false;
       document.body.classList.add('modal-open');
 
-      
+
       modal.querySelector('.modal-close').focus();
     }
 

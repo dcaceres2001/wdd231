@@ -9,8 +9,32 @@
         content="Learn about The Wood Guild — our story, mission, values, and the community of woodworkers behind the site.">
     <meta name="author" content="Douglas Caceres">
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles/guild.css">
+    <!-- Stylesheet >-->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styleslarge.css">
+
+    <!--  JavaScript  -->
+    <script src="scripts/script.js" defer></script>
+
+    <!-- Favicon  -->
+    <link rel="icon" type="image/png" href="images/favicon (1).png">
+
+    <!-- Google Fonts Preconnect  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+
+    <!-- Google Fonts Stylesheet Link -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Open Graph Meta Tags for Social Sharing  -->
+    <meta property="og:title" content="The Wood Guild">
+    <meta property="og:description"
+        content="WDD 231 – Web Frontend Development I- Douglas Caceres-This is my final project website, designed to test my new skills">
+    <meta property="og:image" content="https://dcaceres2001.github.io/wdd231/Finalproject/images/about-shop.webp">
+    <meta property="og:url" content="https://dcaceres2001.github.io/Finalproject/">
+
 </head>
 
 <body>
@@ -51,7 +75,7 @@
         <section id="about-story">
             <div class="about-story-image">
                 <img src="images/about-shop.webp"
-                    alt="A well-equipped woodworking workshop with tools hanging on the wall" />
+                    alt="A well-equipped woodworking workshop with tools hanging on the wall" loading="lazy">
             </div>
             <div class="about-story-text">
                 <p class="eyebrow">How it started</p>
@@ -131,7 +155,7 @@
 
                 <div class="member-card">
                     <div class="member-photo">
-                        <img src="images/member-rafael.webp" alt="Rafael, furniture maker" />
+                        <img src="images/member-rafael.webp" alt="Rafael, furniture maker" loading="lazy">
                     </div>
                     <div class="member-info">
                         <h3>Rafael M.</h3>
@@ -145,7 +169,7 @@
 
                 <div class="member-card">
                     <div class="member-photo">
-                        <img src="images/member-sofia.webp" alt="Sofia, wood turner" />
+                        <img src="images/member-sofia.webp" alt="Sofia, wood turner" loading="lazy">
                     </div>
                     <div class="member-info">
                         <h3>Sofia L.</h3>
@@ -159,7 +183,7 @@
 
                 <div class="member-card">
                     <div class="member-photo">
-                        <img src="images/member-james.webp" alt="James, hobbyist woodworker" />
+                        <img src="images/member-james.webp" alt="James, hobbyist woodworker" loading="lazy">
                     </div>
                     <div class="member-info">
                         <h3>James O.</h3>
@@ -193,12 +217,12 @@
                     <form id="join-form" novalidate>
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required />
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
                             <span class="form-error" id="name-error"></span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="you@email.com" required />
+                            <input type="email" id="email" name="email" placeholder="you@email.com" required>
                             <span class="form-error" id="email-error"></span>
                         </div>
                         <div class="form-group">
@@ -246,7 +270,7 @@
             <p>A community for woodworkers of every level. Built by hand, shared with craft.</p>
         </div>
         <div class="footer-col">
-            <h4>Explore</h4>
+            <h3>Explore</h3>
             <ul>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="tools.html">Tools</a></li>
@@ -255,7 +279,7 @@
             </ul>
         </div>
         <div class="footer-col">
-            <h4>Community</h4>
+            <h3>Community</h3>
             <ul>
                 <li><a href="about.html#about-join">Join the Guild</a></li>
                 <li><a href="#">Submit a Project</a></li>
@@ -263,7 +287,7 @@
             </ul>
         </div>
         <div class="footer-col">
-            <h4>Contact</h4>
+            <h3>Contact</h3>
             <ul>
                 <li><a href="mailto:hello@thewoodguild.org">hello@thewoodguild.org</a></li>
                 <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
@@ -276,8 +300,7 @@
         </div>
     </footer>
 
-    <!--  JavaScript  -->
-    <script src="scripts/script.js"></script>
+    
 
 </body>
 
