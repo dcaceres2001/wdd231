@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "title": "White Oak Dining Table",
+        "category": "Furniture",
+        "skill": "Advanced",
+        "wood": "White Oak",
+        "finish": "Danish Oil",
+        "description": "A 7-foot live-edge slab table with hand-cut mortise and tenon joinery. The natural edge was preserved and lightly sanded to remove any loose bark while keeping the organic shape of the slab.",
+        "image": "images/project-white-oak-dining-table.webp",
+        "alt": "White oak live-edge dining table"
+    },
+    {
+        "id": 2,
+        "title": "Walnut Kitchen Cabinet",
+        "category": "Cabinetry",
+        "skill": "Advanced",
+        "wood": "Black Walnut",
+        "finish": "Lacquer",
+        "description": "Shaker-style cabinet in black walnut with soft-close hinges, inset doors, and hand-planed faces. Interior fitted with adjustable shelving and dovetailed drawer boxes.",
+        "image": "images/project-walnut-shaker-style-cabinet.webp",
+        "alt": "Walnut shaker-style kitchen cabinet with inset doors"
+    },
+    {
+        "id": 3,
+        "title": "Cherry Wood Bowl",
+        "category": "Turning",
+        "skill": "Intermediate",
+        "wood": "Cherry",
+        "finish": "Tung Oil",
+        "description": "Lathe-turned cherry bowl with a natural edge. The figure in the cherry deepens beautifully under tung oil, revealing warm reds and subtle grain movement across the bowl walls.",
+        "image": "images/project-cherry-lathe-bowl.webp",
+        "alt": "Lathe-turned cherry wood bowl with natural edge"
+    },
+    {
+        "id": 4,
+        "title": "Maple Workbench",
+        "category": "Workshop",
+        "skill": "Advanced",
+        "wood": "Hard Maple",
+        "finish": "Boiled Linseed Oil",
+        "description": "A traditional Roubo-style workbench built from hard maple. Features a leg vise, tail vise, and a full row of bench dog holes. The top was flattened with a hand plane to within 0.005 inches.",
+        "image": "images/project-maple-workbench-leg-vise.webp",
+        "alt": "Hard maple Roubo workbench with leg vise"
+    },
+    {
+        "id": 5,
+        "title": "Walnut Cutting Board",
+        "category": "Small Projects",
+        "skill": "Beginner",
+        "wood": "Walnut & Maple",
+        "finish": "Food-Safe Mineral Oil",
+        "description": "End-grain cutting board made from alternating strips of walnut and maple. The end-grain surface is gentle on knife edges and self-heals minor cuts over time. Finished with food-safe mineral oil and beeswax.",
+        "image": "images/project-end-grain-cutting-board.webp",
+        "alt": "End-grain walnut and maple cutting board"
+    },
+    {
+        "id": 6,
+        "title": "Oak Bookcase",
+        "category": "Furniture",
+        "skill": "Intermediate",
+        "wood": "Red Oak",
+        "finish": "Water-Based Polyurethane",
+        "description": "A floor-to-ceiling bookcase in red oak with adjustable shelves and a classic crown molding top. Dadoed shelf pins allow for flexible shelf placement. The back panel is a raised-panel assembly for added rigidity.",
+        "image": "images/project-red-oak-bookcase.webp",
+        "alt": "Floor-to-ceiling red oak bookcase with crown molding"
+    },
+    {
+        "id": 7,
+        "title": "Adirondack Chair",
+        "category": "Outdoor",
+        "skill": "Intermediate",
+        "wood": "Teak",
+        "finish": "Teak Oil",
+        "description": "Classic Adirondack chair built from sustainably sourced teak. All joints are mortise and tenon, glued with epoxy for outdoor durability. The seat and back slats are contoured for comfort and finished with multiple coats of teak oil.",
+        "image": "images/project-teak-adirondack-chairs.webp",
+        "alt": "Teak Adirondack chair with contoured slats"
+    },
+    {
+        "id": 8,
+        "title": "Pine Jewelry Box",
+        "category": "Small Projects",
+        "skill": "Beginner",
+        "wood": "Eastern White Pine",
+        "finish": "Shellac",
+        "description": "A small jewelry box in eastern white pine with hand-cut dovetail corners and a cedar-lined interior. The lid is attached with a hand-cut piano hinge and features a small carved panel on the front.",
+        "image": "images/project-pine-jewelry-box.webp",
+        "alt": "Pine jewelry box with dovetail corners and cedar lining"
+    }
+]

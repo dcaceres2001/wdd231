@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Stanley No. 4 Bench Plane",
+        "category": "Hand Tools",
+        "skill": "Intermediate",
+        "type": "Smoothing Plane",
+        "brand": "Stanley",
+        "description": "The No. 4 smoothing plane is the workhorse of hand-tool woodworking. It flattens, smooths, and trues surfaces to a finish no sandpaper can match — leaving a burnished, light-catching face that brings out the full character of the wood.",
+        "use": "Final surface smoothing, tearout control",
+        "image": "images/tool-stanley-4-hand-plane.webp",
+        "alt": "Stanley No. 4 bench plane on a wood surface"
+    },
+    {
+        "id": 2,
+        "name": "Lie-Nielsen No. 7 Jointer Plane",
+        "category": "Hand Tools",
+        "skill": "Advanced",
+        "type": "Jointer Plane",
+        "brand": "Lie-Nielsen",
+        "description": "The longest plane in the bench plane family, the No. 7 jointer is used to flatten and true the faces and edges of long boards. Its length bridges low spots and shaves down high ones, making it ideal for preparing glue-up joints.",
+        "use": "Flattening wide boards, truing long edges for glue-ups",
+        "image": "images/tool-7-hand-plane.webp",
+        "alt": "Lie-Nielsen No. 7 jointer plane"
+    },
+    {
+        "id": 3,
+        "name": "Narex 6-Piece Chisel Set",
+        "category": "Hand Tools",
+        "skill": "Beginner",
+        "type": "Bench Chisels",
+        "brand": "Narex",
+        "description": "A set of six bench chisels in sizes from 6mm to 32mm, made from chrome-manganese steel that takes and holds a sharp edge well. These are a great entry-level set that outperforms many pricier options and can be sharpened to a razor edge.",
+        "use": "Chopping mortises, paring joints, cleaning up dovetails",
+        "image": "images/tool-narex-chisel-set.webp",
+        "alt": "Narex 6-piece bench chisel set"
+    },
+    {
+        "id": 4,
+        "name": "DeWalt DW735 Thickness Planer",
+        "category": "Power Tools",
+        "skill": "Intermediate",
+        "type": "Thickness Planer",
+        "brand": "DeWalt",
+        "description": "A 13-inch, two-speed thickness planer with a 15-amp motor. The three-knife cutter head rotates at 10,000 RPM and produces a smooth, consistent surface across the full width of the board. Fan-assisted chip ejection keeps the work area clean.",
+        "use": "Surfacing rough lumber, reducing board thickness",
+        "image": "images/tool-dewalt-thickness-planer.webp",
+        "alt": "DeWalt DW735 13-inch thickness planer"
+    },
+    {
+        "id": 5,
+        "name": "Festool Domino DF 500",
+        "category": "Power Tools",
+        "skill": "Intermediate",
+        "type": "Joinery Machine",
+        "brand": "Festool",
+        "description": "The Domino joiner cuts a mortise and injects a loose tenon in one step, making it one of the fastest and most accurate joinery tools available. Perfect for face frames, door rails, and table aprons where speed and alignment matter.",
+        "use": "Loose tenon joinery, face frame assembly, panel alignment",
+        "image": "images/tool-festool-domino.webp",
+        "alt": "Festool Domino DF 500 joinery machine"
+    },
+    {
+        "id": 6,
+        "name": "Veritas Marking Gauge",
+        "category": "Measuring & Layout",
+        "skill": "Beginner",
+        "type": "Marking Gauge",
+        "brand": "Veritas",
+        "description": "A wheel-style marking gauge with a micro-adjust knob that allows precise setting to within a fraction of a millimeter. The cutter scores cleanly across and with the grain, leaving a crisp reference line that guides saw cuts and chisels.",
+        "use": "Marking tenon shoulders, dovetail baselines, mortise depths",
+        "image": "images/tool-veritas-marking-gauge.webp",
+        "alt": "Veritas wheel marking gauge"
+    },
+    {
+        "id": 7,
+        "name": "Woodcraft 12-inch Combination Square",
+        "category": "Measuring & Layout",
+        "skill": "Beginner",
+        "type": "Combination Square",
+        "brand": "Woodcraft",
+        "description": "A precision ground 12-inch combination square with a hardened stainless steel blade and cast iron head. Used to check square and 45-degree angles, mark lines parallel to an edge, and set cutting depths. An indispensable layout tool.",
+        "use": "Checking square, marking parallel lines, depth setting",
+        "image": "images/tool-toolcraft-combination-square.webp",
+        "alt": "12-inch combination square"
+    },
+    {
+        "id": 8,
+        "name": "Mirka DEROS 5-inch Sander",
+        "category": "Finishing",
+        "skill": "Beginner",
+        "type": "Random Orbit Sander",
+        "brand": "Mirka",
+        "description": "A brushless, battery-free electric random orbit sander known for its incredibly smooth action and near-silent operation. The DEROS leaves virtually no swirl marks and is gentle enough for final sanding before finishing. Pairs with Mirka Abranet abrasive mesh for superior dust extraction.",
+        "use": "Surface preparation, final sanding before stain or finish",
+        "image": "images/tool-mirka-orbital-sander.webp",
+        "alt": "Mirka DEROS 5-inch random orbit sander"
+    }
+]

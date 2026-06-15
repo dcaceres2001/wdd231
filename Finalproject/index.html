@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wood Guild</title>
+    <meta name="description"
+        content="WDD 231 – Web Frontend Development I- Douglas Caceres-This is my final project website">
+    <meta name="author" content="Douglas Caceres">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/guild.css">
+
+</head>
+
+<body>
+
+    <!--  Navigation  -->
+    <nav id="main-nav">
+        <a href="index.html" class="nav-logo">The Wood Guild</a>
+        <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="shops.html">Shops</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!--  Mobile Nav Drawer  -->
+    <div id="mobile-nav">
+        <a href="projects.html">Projects</a>
+        <a href="tools.html">Tools</a>
+        <a href="shops.html">Shops</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <!--  Hero  -->
+    <section id="hero">
+        <div class="hero-text">
+            <p class="eyebrow">Local Woodworking Community</p>
+            <h1>Built by hand. Shared with craft.</h1>
+            <p class="hero-desc">
+                The Wood Guild is a community for woodworkers of every level — from the first time you pick up a chisel
+                to the day you finish your masterpiece. Browse projects, learn about tools, and find the best places to
+                buy materials near you.
+            </p>
+            <div class="hero-actions">
+                <a href="projects.html" class="btn btn-primary">Browse Projects</a>
+                <a href="about.html" class="btn btn-outline">Join the Guild</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/woodworker-crafting.webp" alt="Woodworker crafting a piece at a workbench" />
+        </div>
+    </section>
+
+    <!--  Quick Nav strip  -->
+    <nav id="quick-nav">
+        <a href="#projects">🪵 Projects</a>
+        <a href="#tools">🔨 Tools</a>
+        <a href="#shops">🏪 Shops</a>
+    </nav>
+
+    <main>
+
+        <!--  Featured Projects  -->
+        <section id="projects">
+            <div class="section-header">
+                <p class="eyebrow">Member Builds</p>
+                <h2>Featured Projects</h2>
+                <p class="section-sub">Real work from members of the Guild — every piece tells a story of patience,
+                    material, and skill.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <img src="images/white-oak-dining-table.webp" alt="White oak dining table with live edge slab" />
+                    <div class="card-body">
+                        <span class="tag">Furniture</span>
+                        <h3>White Oak Dining Table</h3>
+                        <p>A 7-foot live-edge slab table with hand-cut mortise and tenon joinery. Finished with Danish
+                            oil.</p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="images/walnut-shaker-style-cabinet.webp" alt="Walnut shaker-style kitchen cabinet" />
+                    <div class="card-body">
+                        <span class="tag">Cabinetry</span>
+                        <h3>Walnut Kitchen Cabinet</h3>
+                        <p>Shaker-style cabinet in black walnut. Soft-close hinges, inset doors, and hand-planed faces.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="images/cherry-lathe-bowl.webp" alt="Lathe-turned cherry wood bowl" />
+                    <div class="card-body">
+                        <span class="tag">Turning</span>
+                        <h3>Cherry Wood Bowl</h3>
+                        <p>Lathe-turned cherry bowl with a natural edge. Tung oil finish that deepens the figure in the
+                            wood.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="section-footer">
+                <a href="projects.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </section>
+
+        <!--  Tool Spotlight  -->
+        <section id="tools">
+            <div class="tool-image">
+                <img src="images/stanley-hand-plane.webp" alt="Stanley No. 4 bench plane on a wood surface" />
+            </div>
+            <div class="tool-content">
+                <p class="eyebrow">Essential Hand Tools</p>
+                <h2>Stanley No. 4 Bench Plane</h2>
+                <p>
+                    The No. 4 smoothing plane is the workhorse of hand-tool woodworking. It flattens, smooths, and trues
+                    surfaces to a finish no sandpaper can match — leaving a burnished, light-catching face that brings
+                    out the full character of the wood.
+                </p>
+                <table class="tool-specs">
+                    <tr>
+                        <th>Category</th>
+                        <td>Hand Planes · Smoothing</td>
+                    </tr>
+                    <tr>
+                        <th>Skill Level</th>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <th>Blade Width</th>
+                        <td>2 inches (50 mm)</td>
+                    </tr>
+                    <tr>
+                        <th>Best For</th>
+                        <td>Final smoothing, grain tearout</td>
+                    </tr>
+                </table>
+                <a href="tools.html" class="btn btn-primary">Explore All Tools</a>
+            </div>
+        </section>
+
+        <!--  Shop Directory  -->
+        <section id="shops">
+            <div class="section-header">
+                <p class="eyebrow">Where to Buy</p>
+                <h2>Shop Directory</h2>
+                <p class="section-sub">Trusted local and online sources for lumber, tools, and finishing materials
+                    recommended by Guild members.</p>
+            </div>
+
+            <div class="shops-grid">
+
+                <div class="shop-card">
+                    <span class="tag tag-local">Local</span>
+                    <h3>Rockler Woodworking &amp; Hardware</h3>
+                    <p>Family-owned since 1954 with 35+ locations nationwide. Tools, hardware, lumber, and
+                        hands-on woodworking classes for all skill levels.</p>
+                    <a href="shops.html">View Details →</a>
+                </div>
+
+                <div class="shop-card">
+                    <span class="tag tag-local">Local</span>
+                    <h3>Highland Woodworking</h3>
+                    <p>Atlanta's historic woodworking store since 1978. Home of the legendary Wood Slicer bandsaw
+                        blade, expert staff, and personalized classes.</p>
+                    <a href="shops.html">View Details →</a>
+                </div>
+
+                <div class="shop-card">
+                    <span class="tag tag-online">Online</span>
+                    <h3>Bell Forest Products</h3>
+                    <p>Family-run online lumber supplier specializing in domestic hardwoods, exotic species, and
+                        figured wood — carefully graded and shipped nationwide.</p>
+                    <a href="shops.html">View Details →</a>
+                </div>
+
+            </div>
+
+            <div class="section-footer">
+                <a href="shops.html" class="btn btn-primary">View All Shops</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!--  Footer  -->
+    <footer id="main-footer">
+        <div class="footer-brand">
+            <p class="footer-logo">The Wood Guild</p>
+            <p>A community for woodworkers of every level. Built by hand, shared with craft.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="shops.html">Shops</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Community</h4>
+            <ul>
+                <li><a href="#">Join the Guild</a></li>
+                <li><a href="#">Submit a Project</a></li>
+                <li><a href="#">Workshops</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:hello@thewoodguild.org">hello@thewoodguild.org</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Wood Guild &nbsp;·&nbsp; thewoodguild.org</p>
+            <p>WDD 231 Project</p>
+        </div>
+    </footer>
+
+    <!--  JavaScript — loaded at end of body  -->
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>

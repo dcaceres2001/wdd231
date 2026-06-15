@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "Rockler Woodworking & Hardware",
+        "type": "local",
+        "tagline": "Tools, hardware & classes for all levels",
+        "city": "Nationwide — 35+ locations",
+        "website": "https://www.rockler.com",
+        "mapsUrl": "https://www.rockler.com/retail/stores",
+        "image": "images/shop-rockler.webp",
+        "alt": "Rockler Woodworking and Hardware store front",
+        "specialties": [
+            "Hand Tools",
+            "Power Tools",
+            "Hardware",
+            "Lumber & Exotics",
+            "Project Supplies"
+        ],
+        "description": "Family-owned since 1954, Rockler Woodworking & Hardware is one of the most trusted names in the woodworking world. Their stores carry an exceptional range of tools, jigs, hardware, and finishing supplies — everything from SawStop table saws to specialty router bits and drawer slides. Many locations also stock quality hardwoods, exotic lumber, and live-edge slabs.",
+        "hours": "Mon–Fri: 9:00 AM – 8:00 PM · Sat: 9:00 AM – 6:00 PM · Sun: 10:00 AM – 5:00 PM",
+        "priceRange": "$$",
+        "memberTip": "Sign up for their email list — they run frequent promo codes (20–30% off) and their in-store classes are excellent for beginners and intermediate woodworkers alike."
+    },
+    {
+        "id": 2,
+        "name": "Woodcraft Supply",
+        "type": "local",
+        "tagline": "Premium tools, wood & woodworking education",
+        "city": "Nationwide — 70+ locations",
+        "website": "https://www.woodcraft.com",
+        "mapsUrl": "https://www.woodcraft.com/stores",
+        "image": "images/shop-woodcraft.webp",
+        "alt": "Woodcraft Supply store interior with tools on display",
+        "specialties": [
+            "Hand Tools",
+            "Power Tools",
+            "Wood Turning",
+            "Carving",
+            "Finishing Supplies"
+        ],
+        "description": "Founded in 1928, Woodcraft is one of the oldest and most respected woodworking retailers in the country. With over 70 locations across the US, they offer an impressive selection of hand tools, power tools, raw materials, and instructional media. Woodcraft stores are also known for their hands-on classes taught by expert instructors — a great way to build skills at any level.",
+        "hours": "Mon–Sat: 9:00 AM – 6:00 PM · Sun: 11:00 AM – 5:00 PM",
+        "priceRange": "$$",
+        "memberTip": "Their turning section is exceptional — if you're into lathe work, Woodcraft carries bowl blanks and pen blanks that are hard to find anywhere else locally."
+    },
+    {
+        "id": 3,
+        "name": "Highland Woodworking",
+        "type": "local",
+        "tagline": "Atlanta's historic woodworking store since 1978",
+        "city": "1045 N Highland Ave NE, Atlanta, GA 30306",
+        "website": "https://www.highlandwoodworking.com",
+        "mapsUrl": "https://maps.google.com/?q=Highland+Woodworking+Atlanta+GA",
+        "image": "images/shop-highland.webp",
+        "alt": "Highland Woodworking storefront in Atlanta Georgia",
+        "specialties": [
+            "Hand Tools",
+            "Bandsaw Blades",
+            "Woodworking Classes",
+            "Books & DVDs",
+            "Sharpening Supplies"
+        ],
+        "description": "Highland Woodworking has been a beloved institution in Atlanta since 1978. Home of the legendary Wood Slicer bandsaw blade, Highland is particularly well-regarded for its hand tool selection and deeply knowledgeable staff. Their customers range from hobbyists to professional cabinetmakers, and even Jimmy Carter was known to shop here. They also offer personalized woodworking classes and seminars throughout the year.",
+        "hours": "Mon–Fri: 9:00 AM – 6:00 PM · Sat: 9:00 AM – 5:00 PM · Sun: 12:30 PM – 4:30 PM",
+        "priceRange": "$$",
+        "memberTip": "Ask the staff for blade recommendations — their Wood Slicer bandsaw blades are legendary in the woodworking community and far superior to anything you'll find at a big-box store."
+    },
+    {
+        "id": 4,
+        "name": "Woodpeckers",
+        "type": "online",
+        "tagline": "Precision layout tools designed & made in the USA",
+        "city": "Strongsville, Ohio (Online orders only)",
+        "website": "https://www.woodpeck.com",
+        "mapsUrl": "https://www.woodpeck.com",
+        "image": "images/shop-woodpeckers.webp",
+        "alt": "Woodpeckers precision layout tools",
+        "specialties": [
+            "Layout & Marking Tools",
+            "Squares & Rules",
+            "Router Accessories",
+            "Clamping Systems",
+            "Slab Flattening"
+        ],
+        "description": "Woodpeckers designs and manufactures premium precision layout tools right here in the USA. Known for their ultra-accurate squares, rules, and T-squares machined from aircraft-grade aluminum, their tools are a step above anything mass-produced. They also make innovative power tool accessories including the Slab Flattening Mill PRO and the ClampZILLA panel clamp system. Many items are limited 'One Time Tools' so availability can vary.",
+        "hours": "Online store open 24/7 · Customer service: Mon–Fri 8:00 AM – 5:00 PM EST",
+        "priceRange": "$$$",
+        "memberTip": "Watch their website for 'One Time Tool' announcements — these are limited production runs of specialty items that often sell out fast. Well worth the premium price for precision-critical work."
+    },
+    {
+        "id": 5,
+        "name": "Bell Forest Products",
+        "type": "online",
+        "tagline": "Specialty hardwoods & exotic lumber shipped to your door",
+        "city": "Ishpeming, Michigan (Ships nationwide)",
+        "website": "https://www.bellforestproducts.com",
+        "mapsUrl": "https://www.bellforestproducts.com",
+        "image": "images/shop-bellforest.webp",
+        "alt": "Bell Forest Products hardwood lumber selection",
+        "specialties": [
+            "Domestic Hardwoods",
+            "Exotic Lumber",
+            "Turning Blanks",
+            "Pen Blanks",
+            "Figured Wood"
+        ],
+        "description": "Bell Forest Products is a family-run online lumber supplier specializing in domestic hardwoods, exotic species, and figured wood for fine woodworking projects. They stock an impressive range including walnut, cherry, maple, purpleheart, padauk, and hard-to-find figured pieces like curly maple and quilted maple. Their lumber is carefully graded and kiln-dried, and they ship nationwide with reliable packaging to prevent damage in transit.",
+        "hours": "Online store open 24/7 · Customer service: Mon–Fri 9:00 AM – 5:00 PM EST",
+        "priceRange": "$$",
+        "memberTip": "Their pen blank and small turning blank selection is outstanding and very affordable. For larger slabs, check their Instagram where they post new arrivals before they hit the website."
+    }
+]

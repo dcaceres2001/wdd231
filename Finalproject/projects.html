@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — The Wood Guild</title>
+    <meta name="description" content="Browse member woodworking projects — furniture, cabinetry, turning, and more.">
+    <meta name="author" content="Douglas Caceres">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/guild.css">
+</head>
+
+<body>
+
+    <!--  Navigation  -->
+    <nav id="main-nav">
+        <a href="index.html" class="nav-logo">The Wood Guild</a>
+        <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="shops.html">Shops</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!--  Mobile Nav Drawer  -->
+    <div id="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="tools.html">Tools</a>
+        <a href="shops.html">Shops</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <!--  Page Banner  -->
+    <section id="page-banner">
+        <p class="eyebrow">Member Builds</p>
+        <h1>Projects</h1>
+        <p class="banner-sub">Browse work from Guild members — every project is a lesson in material, patience, and
+            craft.</p>
+    </section>
+
+    <main>
+
+        <!--  Filter Bar  -->
+        <div id="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Furniture">Furniture</button>
+            <button class="filter-btn" data-filter="Cabinetry">Cabinetry</button>
+            <button class="filter-btn" data-filter="Turning">Turning</button>
+            <button class="filter-btn" data-filter="Workshop">Workshop</button>
+            <button class="filter-btn" data-filter="Small Projects">Small Projects</button>
+            <button class="filter-btn" data-filter="Outdoor">Outdoor</button>
+        </div>
+
+        <!--  Projects Grid  -->
+        <section id="projects-grid">
+            <!-- Cards are injected here by script.js -->
+        </section>
+
+        <!--  No results message (hidden by default)  -->
+        <p id="no-results" hidden>No projects found for that category.</p>
+
+    </main>
+
+    <!--  Footer  -->
+    <footer id="main-footer">
+        <div class="footer-brand">
+            <p class="footer-logo">The Wood Guild</p>
+            <p>A community for woodworkers of every level. Built by hand, shared with craft.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="shops.html">Shops</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Community</h4>
+            <ul>
+                <li><a href="#">Join the Guild</a></li>
+                <li><a href="#">Submit a Project</a></li>
+                <li><a href="#">Workshops</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:hello@thewoodguild.org">hello@thewoodguild.org</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Wood Guild &nbsp;·&nbsp; thewoodguild.org</p>
+            <p>WDD 231 Project</p>
+        </div>
+    </footer>
+
+    <!--  JavaScript  -->
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>

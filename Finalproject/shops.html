@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shops — The Wood Guild</title>
+    <meta name="description"
+        content="Find trusted local and online woodworking shops — tools, lumber, hardware and finishing supplies recommended by Guild members.">
+    <meta name="author" content="Douglas Caceres">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/guild.css">
+</head>
+
+<body>
+
+    <!--  Navigation  -->
+    <nav id="main-nav">
+        <a href="index.html" class="nav-logo">The Wood Guild</a>
+        <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="shops.html" class="active">Shops</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!--  Mobile Nav Drawer  -->
+    <div id="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="tools.html">Tools</a>
+        <a href="shops.html">Shops</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <!--  Page Banner  -->
+    <section id="page-banner">
+        <p class="eyebrow">Where to Buy</p>
+        <h1>Shop Directory</h1>
+        <p class="banner-sub">Trusted local and online sources for lumber, tools, and materials — recommended by Guild
+            members.</p>
+    </section>
+
+    <main>
+
+        <!--  Filter Bar  -->
+        <div id="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Shops</button>
+            <button class="filter-btn" data-filter="local">Local</button>
+            <button class="filter-btn" data-filter="online">Online</button>
+        </div>
+
+        <!--  Shops Grid  -->
+        <section id="shops-grid">
+            <!-- Cards injected by script.js -->
+        </section>
+
+        <!--  No results  -->
+        <p id="no-results" hidden>No shops found for that filter.</p>
+
+    </main>
+
+    <!--  Modal  -->
+    <div id="shop-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <div class="modal-image">
+                <img id="modal-img" src="" alt="" />
+            </div>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <span id="modal-type" class="tag"></span>
+                    <span id="modal-price" class="price-range"></span>
+                </div>
+                <h2 id="modal-title"></h2>
+                <p id="modal-city" class="modal-city"></p>
+                <p id="modal-description"></p>
+                <div class="modal-specialties">
+                    <p class="modal-section-label">Specialties</p>
+                    <ul id="modal-specialties"></ul>
+                </div>
+                <div class="modal-meta">
+                    <div class="modal-meta-row">
+                        <span class="modal-section-label">&#128345; Hours</span>
+                        <p id="modal-hours"></p>
+                    </div>
+                    <div class="modal-meta-row">
+                        <span class="modal-section-label">&#128172; Member Tip</span>
+                        <p id="modal-tip"></p>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <a id="modal-visit-btn" href="#" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">Visit Website</a>
+                    <a id="modal-map-btn" href="#" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-outline-dark">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Footer  -->
+    <footer id="main-footer">
+        <div class="footer-brand">
+            <p class="footer-logo">The Wood Guild</p>
+            <p>A community for woodworkers of every level. Built by hand, shared with craft.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="shops.html">Shops</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Community</h4>
+            <ul>
+                <li><a href="about.html#about-join">Join the Guild</a></li>
+                <li><a href="#">Submit a Project</a></li>
+                <li><a href="#">Workshops</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:hello@thewoodguild.org">hello@thewoodguild.org</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Wood Guild &nbsp;·&nbsp; thewoodguild.org</p>
+            <p>WDD 231 Project</p>
+        </div>
+    </footer>
+
+    <!--  JavaScript  -->
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>
