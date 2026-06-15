@@ -19,13 +19,14 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
 
     <!-- Google Fonts Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
 
     <!-- Google Fonts Stylesheet Link -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;600&display=swap"
+        href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;600&display=swap"
         rel="stylesheet">
+
 
     <!-- Open Graph Meta Tags for Social Sharing  -->
     <meta property="og:title" content="The Wood Guild">
@@ -38,39 +39,41 @@
 </head>
 
 <body>
+    <header>
+        <!--  Navigation  -->
+        <nav id="main-nav">
+            <a href="index.html" class="nav-logo">The Wood Guild</a>
+            <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="shops.html">Shops</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
 
-    <!--  Navigation  -->
-    <nav id="main-nav">
-        <a href="index.html" class="nav-logo">The Wood Guild</a>
-        <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="tools.html">Tools</a></li>
-            <li><a href="shops.html">Shops</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
+        <!--  Mobile Nav Drawer  -->
+        <div id="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="tools.html">Tools</a>
+            <a href="shops.html">Shops</a>
+            <a href="about.html">About</a>
+        </div>
+    </header>
 
-    <!--  Mobile Nav Drawer  -->
-    <div id="mobile-nav">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="tools.html">Tools</a>
-        <a href="shops.html">Shops</a>
-        <a href="about.html">About</a>
-    </div>
     <main>
-    <!--  Page Banner  -->
-    <section id="page-banner">
-        <p class="eyebrow">Member Builds</p>
-        <h1>Projects</h1>
-        <p class="banner-sub">Browse work from Guild members — every project is a lesson in material, patience, and
-            craft.</p>
-    </section>
+        <!--  Page Banner  -->
+        <section id="page-banner">
+            <p class="eyebrow">Member Builds</p>
+            <h1>Projects</h1>
+            <p class="banner-sub">Browse work from Guild members — every project is a lesson in material, patience, and
+                craft.</p>
+        </section>
 
-    
-        
+
+
         <!--  Filter Bar  -->
         <div id="filter-bar">
             <button class="filter-btn active" data-filter="all">All</button>
@@ -129,7 +132,7 @@
         </div>
     </footer>
 
-   
+
 
 </body>
 
