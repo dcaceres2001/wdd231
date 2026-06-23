@@ -1,4 +1,7 @@
 /*  CSS Variables  */
+@import url(view-transitions.css);
+
+
 :root {
     --bg: #F5F0E8;
     --surface: #FFFDF7;

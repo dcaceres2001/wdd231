@@ -1,0 +1,11 @@
+@view-transition {
+
+    navigation: auto;
+
+}
+
+::view-transition-group(*) {
+
+    animation-duration: 1s;
+
+}
